@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1450px;
+    font-size: 1rem;
+}
+
+#text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logo-header > img{
+    width: 100px;
+}
+
+h1{
+    letter-spacing: .5rem;
+    color: hsl(0, 6%, 24%);
+    font-size: 2.8rem;
+    line-height: 3rem;
+}
+
+h1 > span{
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+#text-div > p{
+    color: hsl(0, 36%, 70%);
+    font-size: .95rem;
+    line-height: 1.5rem;
+}
+
+#input-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+
+input{
+    height: 50px;
+    padding-left: 1rem;
+    border: solid 1px hsl(0, 36%, 70%);
+    border-radius: 50px;
+}
+
+input::placeholder{
+    color: rgb(206, 151, 151, .5);   
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    cursor: pointer;
+    height: 50px;
+    width: 80px;
+    border: none;
+    border-radius: 50px;
+    margin-left: -5rem;
+}
+
+button:hover{
+    scale: 110%;
+    box-shadow: 0 10px 15px rgb(232, 196, 196);
+}
+
+button:active{
+    scale: 100%;
+    box-shadow: none;
+    background: rgb(248, 206, 207);
+}
+
+.error{
+    border: solid 2px hsl(0, 93%, 68%);
+    background: url(images/icon-error.svg) no-repeat;
+    background-position: 75% 50%;
+}
+
+#error-span{
+    display: none;
+    font-size: .8rem;
+    color: hsl(0, 93%, 68%);
+}
+
+@media(min-width: 700px){
+    #main-container{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }   
+
+    #text-div{
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: 120%;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        padding-left: 4rem;
+        width: 55%;
+    }
+
+    #logo-header{
+        position: absolute;
+        width: 55%;
+        padding: 3rem 0 0 4rem;    
+    }
+
+    #bg-div{
+        height: 100vh;
+        background-image: url(images/hero-desktop.jpg);
+        background-size: 108%;
+        width: 45%;
+    }
+
+    h1{
+        margin: 0 8rem 2rem 0;
+    }
+
+    #text-div > p{
+        margin: 0 5rem 2rem 0;
+    }
+
+    input{
+        width: 400px;
+    }
+
+    #error-span{
+        margin-left: 1rem;
+    }
+
+    footer{
+        position: absolute;
+        bottom: 1rem;
+        left: 6rem;
+    }
+}
+
+@media(max-width: 700px){
+    #main-container{
+        width: 350px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #logo-header{
+        position: relative;
+        top: 0;
+        left: -67px;
+        width: 350px;
+        padding: 2rem 0 2rem 2rem;    
+    }
+
+    #text-div{   
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    h1{
+        margin-bottom: 2rem;
+    }
+
+    #text-div > p{
+        margin: 0 .9rem 2rem .9rem;    
+    }
+
+    input{
+        width: 330px;
+    }
+
+    #input-div{
+        margin-bottom: 2rem;
+    }
+
+    #error-span{
+        margin: -1.5rem 0 2rem 0;
+    }
+
+    .error{
+        background-position: 70% 50%;
+    }
+
+    #bg-div{
+        height: 320px;
+        background-image: url(images/hero-mobile.jpg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100vw;
+        margin-bottom: 2rem;
+    }
+
+    footer{
+        margin-bottom: 1rem;
+    }
+}
+
+footer{
+    color: hsl(0, 6%, 24%);
+    font-size: 11px;
+    text-align: center;
+}
+
+footer a{
+color: hsl(0, 93%, 68%);
+}
